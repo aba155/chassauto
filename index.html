@@ -895,7 +895,7 @@
           </select>
         </div>
       </div>
-      <div class="form-group"><label>Lien annonce <span style="color:var(--accent)">*</span></label><input type="url" id="c-lien" placeholder="https://www.leboncoin.fr/…" /></div>
+      <div class="form-group"><label>Lien annonce <span style="color:var(--muted)">(optionnel)</span></label><input type="url" id="c-lien" placeholder="https://www.leboncoin.fr/…" /></div>
       <div class="form-group"><label>Message <span style="color:var(--accent)">*</span></label><textarea id="c-msg" placeholder="Décrivez le véhicule et votre situation…"></textarea></div>
       <div style="font-size:0.75rem;color:var(--muted);margin-top:4px;">* Tous les champs sont obligatoires</div>
       <button class="btn-primary form-submit" onclick="submitContact()">Envoyer ma demande →</button>
@@ -1026,7 +1026,7 @@ async function submitContact() {
   const msg = document.getElementById('c-msg').value.trim();
 
   // Reset error styles
-  ['c-nom','c-email','c-tel','c-formule','c-lien','c-msg'].forEach(id => {
+  ['c-nom','c-email','c-tel','c-formule','c-msg'].forEach(id => {
     document.getElementById(id).style.borderColor = '';
   });
 
@@ -1036,7 +1036,6 @@ async function submitContact() {
   if (!email) errors.push('c-email');
   if (!tel) errors.push('c-tel');
   if (!formule) errors.push('c-formule');
-  if (!lien) errors.push('c-lien');
   if (!msg) errors.push('c-msg');
 
   if (errors.length > 0) {
