@@ -1,0 +1,16 @@
+{
+  "name": "chassauto",
+  "version": "1.0.0",
+  "description": "Chass'Automobile — Expert achat automobile en Île-de-France",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000 || python3 -m http.server 3000",
+    "build": "echo 'Static HTML project - no build needed'"
+  },
+  "keywords": ["automobile", "vehicle", "inspection"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
