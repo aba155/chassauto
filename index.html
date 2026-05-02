@@ -1052,10 +1052,11 @@ async function submitContact() {
   btn.disabled = true;
 
   try {
-    const res = await fetch('https://formspree.io/f/VOTRE_ID_FORMSPREE', {
+    const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
+        access_key: '62f5f4da-fb98-4f03-b6d6-843947f34f3f',
         nom, email, tel, formule,
         lien_annonce: lien,
         message: msg
