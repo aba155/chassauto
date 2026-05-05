@@ -1,0 +1,59 @@
+# robots.txt — chassauto.fr
+# Généré le 2026-05-05
+
+# Autoriser tous les moteurs de recherche
+User-agent: *
+Allow: /
+
+# Bloquer les ressources inutiles pour le crawl
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /*.json$
+Disallow: /tmp/
+Disallow: /cache/
+
+# Autoriser les ressources CSS et JS (important pour le rendu Google)
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.gif$
+
+# Crawl-delay pour éviter la surcharge serveur
+Crawl-delay: 1
+
+# Règles spécifiques par bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Bloquer les bots indésirables
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://chassauto.fr/sitemap.xml
